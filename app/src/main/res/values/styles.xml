@@ -1,0 +1,77 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Style_IB">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Form_Fields_ET">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:background">@drawable/fields_border</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColorHint">@color/gray_hint</item>
+    </style>
+
+    <style name="Match_Width_RippleView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/ripple_button_padding_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/ripple_button_padding_vertical</item>
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:background">@drawable/solid_blue_no_stroke_corner_20</item>
+    </style>
+
+    <style name="Wrap_Width_RippleView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/ripple_button_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/ripple_button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/ripple_button_padding_vertical</item>
+        <item name="android:paddingEnd">@dimen/ripple_button_padding_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:background">@drawable/solid_blue_no_stroke_corner_20</item>
+    </style>
+
+    <style name="RippleView_Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+</resources>

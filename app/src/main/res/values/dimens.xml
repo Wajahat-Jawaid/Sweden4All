@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="form_fields_margin_bottom">11dp</dimen>
+    <dimen name="ripple_button_padding_vertical">9dp</dimen>
+    <dimen name="ripple_button_padding_horizontal">70dp</dimen>
+</resources>
