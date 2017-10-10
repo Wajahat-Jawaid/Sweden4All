@@ -1,10 +1,13 @@
 package com.sweden4all.activities.accounts;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
+import com.google.gson.Gson;
 import com.sweden4all.R;
 import com.sweden4all.activities.ActHome;
 import com.sweden4all.activities.BaseActivity;
+import com.sweden4all.constants.Constants;
 import com.sweden4all.responses.UserResponse;
 import com.sweden4all.views.BaseView;
 import com.sweden4all.views.accounts.LogInView;
@@ -36,8 +39,19 @@ public class ActLogIn extends BaseActivity {
     private void parseResponse(UserResponse response) {
         try {
             if (response != null) {
+                Log.i(TAG, "Response: " + new Gson().toJson(response));
                 showSnackBar(R.string.logged_in);
-                switchActivity(ActHome.class);
+                prefs.insert(Constants.USER_ID, response.getId());
+                prefs.insert(Constants.NAME, response.getName());
+                prefs.insert(Constants.EMAIL, response.getEmail());
+                prefs.insert(Constants.PASSWORD, response.getPwd());
+                prefs.insert(Constants.PHONE, response.getPhone());
+                prefs.insert(Constants.CITY, response.getCity());
+                prefs.insert(Constants.COUNTRY, response.getCountry());
+                prefs.insert(Constants.USER_DOB, response.getDob());
+                prefs.insert(Constants.ABOUT_ME, response.getAboutMe());
+//                switchActivity(ActHome.class);
+                switchActivity(ActEditProfile.class);
                 finish();
             }
         } catch (Exception e) {

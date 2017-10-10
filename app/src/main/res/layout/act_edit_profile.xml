@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/user_placeholder" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="@android:color/white" />
+
+                <com.sweden4all.components.MTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/about_us"
+                    app:fontName="Roboto_Medium" />
+
+                <com.sweden4all.components.MTextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/about_us"
+                    app:fontName="Roboto_Regular" />
+
+                <com.sweden4all.utils.RippleView
+                    android:id="@+id/rv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/sea_green_sold_no_stroke_corder_16_btn"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="30dp"
+                    android:paddingTop="10dp">
+
+                    <com.sweden4all.components.MTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit"
+                        android:textColor="@color/white_text"
+                        android:textSize="14sp" />
+                </com.sweden4all.utils.RippleView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+                <com.sweden4all.components.MEditText
+                    android:id="@+id/et_about"
+                    style="@style/Form_Fields_ET"
+                    android:hint="@string/about_me" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+                <com.sweden4all.components.MEditText
+                    android:id="@+id/et_email"
+                    style="@style/Form_Fields_ET"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+                <com.sweden4all.components.MEditText
+                    android:id="@+id/et_phone"
+                    style="@style/Form_Fields_ET"
+                    android:hint="@string/phone"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+                <com.sweden4all.components.MEditText
+                    android:id="@+id/et_city"
+                    style="@style/Form_Fields_ET"
+                    android:hint="@string/city" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+                <com.sweden4all.components.MEditText
+                    android:id="@+id/et_country"
+                    style="@style/Form_Fields_ET"
+                    android:hint="@string/country" />
+            </android.support.design.widget.TextInputLayout>
+
+            <com.sweden4all.components.MTextView
+                android:id="@+id/et_dob"
+                style="@style/Form_Fields_ET"
+                android:text="@string/dob" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

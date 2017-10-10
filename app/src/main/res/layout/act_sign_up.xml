@@ -90,9 +90,9 @@
                 <com.sweden4all.components.MEditText
                     android:id="@+id/et_dob"
                     style="@style/Form_Fields_ET"
-                    android:hint="@string/dob"
-                    android:focusable="false"
                     android:clickable="false"
+                    android:focusable="false"
+                    android:hint="@string/dob"
                     android:inputType="none" />
             </android.support.design.widget.TextInputLayout>
 

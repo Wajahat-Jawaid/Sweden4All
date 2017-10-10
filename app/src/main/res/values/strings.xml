@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Sweden4All</string>
+    <string name="app_name">Sweden 4 All AB</string>
+    <string name="appointments">Appointments</string>
+    <string name="about_me">About me</string>
+    <string name="about_us">About us</string>
     <string name="app_status">Application Status</string>
     <string name="already_account">Already have an account?</string>
     <string name="contact_us">Contact us</string>
@@ -7,13 +10,20 @@
     <string name="cnfrm_pwd">Confirm Password</string>
     <string name="country">Country</string>
     <string name="dob">Date of birth</string>
+    <string name="edit">Edit</string>
     <string name="email">Email</string>
+    <string name="faqs">FAQs</string>
     <string name="fb_page_link">www.facebook.com/swedenforall</string>
+    <string name="home">Home</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="messenger">Messenger</string>
     <string name="name">Name</string>
     <string name="no_account">New here?</string>
     <string name="phone">Phone</string>
+    <string name="profile">Profile</string>
     <string name="pwd">Password</string>
-    <string name="login">Login</string>
+    <string name="settings">Settings</string>
     <string name="services">Services</string>
     <string name="sign_up">Sign up</string>
     <string name="sweden_mig_sol">Sweden Migration Solutions</string>
@@ -22,5 +32,6 @@
     <string name="no_internet">Please enable internet</string>
     <string name="acc_created">Account created successfully!</string>
     <string name="logged_in">Logged in successfully!</string>
+    <string name="no_chngs_made">No changes made</string>
     <string name="a"></string>
 </resources>

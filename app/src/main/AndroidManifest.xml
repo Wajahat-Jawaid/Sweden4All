@@ -33,7 +33,18 @@
             android:name=".activities.accounts.ActSignUp"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.accounts.ActEditProfile"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <!-- ACCOUNTS ENDS -->
+
+        <!-- APPOINTMENTS STARTS -->
+        <activity
+            android:name=".activities.appointments.ActListAppointments"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- APPOINTMENTS ENDS -->
     </application>
 
 </manifest>

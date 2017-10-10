@@ -9,6 +9,8 @@ public final class Constants {
     /**
      * Keys
      */
+    public static final String ABOUT_ME = "aboutMe";
+
     public static final String CITY = "city";
     public static final String COUNTRY = "country";
 
@@ -20,6 +22,8 @@ public final class Constants {
 
     public static final String PASSWORD = "password";
     public static final String PHONE = "phone";
+
+    public static final String QUERY = "query";
 
     public static final String USER_DOB = "userDOB";
     public static final String USER_ID = "userID";
@@ -50,6 +54,7 @@ public final class Constants {
     public static final int SECURITY_PIN_LENGTH = 6;
     public static final int TRANSACTION_PIN_LENGTH = 4;
     public static final int BTN_ENABLED_BG = R.drawable.solid_blue_no_stroke_corner_20;
+    public static final int BTN_ENABLED_SEA_GREEN_BG = R.drawable.sea_green_sold_no_stroke_corder_16_btn;
     public static final int BTN_DISABLED_BG = R.drawable.solid_gray_no_stroke_corner_20;
 
     /**

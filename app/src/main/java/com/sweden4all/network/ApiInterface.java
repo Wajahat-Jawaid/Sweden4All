@@ -27,4 +27,9 @@ public interface ApiInterface {
                                       @Field(Constants.USER_DOB) String dob,
                                       @Field(Constants.PASSWORD) String pwd,
                                       @Field(Constants.DEVICE_TOKEN) String token);
+
+    @FormUrlEncoded
+    @POST(POSTFIX + "editInfo")
+    Observable<UserResponse> editProfile(@Field(Constants.USER_ID) String id,
+                                         @Field(Constants.QUERY) String query);
 }
