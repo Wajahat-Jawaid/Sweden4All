@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".activities.ActSplash"
             android:noHistory="true">
@@ -42,6 +42,15 @@
         <!-- APPOINTMENTS STARTS -->
         <activity
             android:name=".activities.appointments.ActListAppointments"
+            android:theme="@style/MyMaterialTheme"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.appointments.ActScheduleAppointment"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".fragments.ZZAppointmentsHistory"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <!-- APPOINTMENTS ENDS -->

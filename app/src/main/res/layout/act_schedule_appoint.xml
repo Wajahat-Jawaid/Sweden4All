@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_hint">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/inc_toolbar_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rv_send"
+        android:layout_below="@+id/toolbar"
+        android:paddingBottom="20dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/solid_white_corner_10"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <com.sweden4all.components.MTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/meet_with_sweden"
+                        android:textColor="@color/gray_text"
+                        android:textSize="22sp"
+                        app:fontName="Roboto_Italic" />
+
+                    <com.sweden4all.components.MTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:text="1 hour"
+                        android:textColor="@color/gray_text"
+                        app:fontName="Roboto_Italic" />
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/user_placeholder" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/solid_white_corner_10"
+                android:padding="10dp">
+
+                <com.sweden4all.components.MTextView
+                    android:id="@+id/tv_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/select_cat"
+                    app:fontName="Roboto_Bold" />
+
+                <View
+                    android:id="@+id/separator_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_cat"
+                    android:layout_margin="4dp" />
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/ib_cat"-->
+                <!--style="@style/Style_IB"-->
+                <!--android:layout_below="@+id/separator_cat"-->
+                <!--android:padding="0dp"-->
+                <!--android:src="@mipmap/ic_profile" />-->
+
+                <com.sweden4all.utils.RippleView
+                    android:id="@+id/rv_select_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separator_cat"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp">
+
+                    <com.sweden4all.components.MTextView
+                        android:id="@+id/tv_cat_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_cat"
+                        android:textColor="@color/gray_text"
+                        app:fontName="Roboto_Medium" />
+                </com.sweden4all.utils.RippleView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/solid_white_corner_10"
+                android:padding="10dp">
+
+                <com.sweden4all.components.MTextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/pick_time"
+                    app:fontName="Roboto_Bold" />
+
+                <View
+                    android:id="@+id/separator_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_time"
+                    android:layout_margin="4dp" />
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/ib_date"-->
+                <!--style="@style/Style_IB"-->
+                <!--android:layout_below="@+id/separator_cat"-->
+                <!--android:padding="0dp"-->
+                <!--android:src="@mipmap/ic_profile" />-->
+
+                <com.sweden4all.utils.RippleView
+                    android:id="@+id/rv_select_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separator_time"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="10dp">
+
+                    <com.sweden4all.components.MTextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_date"
+                        android:textColor="@color/gray_text"
+                        app:fontName="Roboto_Medium" />
+                </com.sweden4all.utils.RippleView>
+
+                <com.sweden4all.utils.RippleView
+                    android:id="@+id/rv_select_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_select_date"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="10dp">
+
+                    <com.sweden4all.components.MTextView
+                        android:id="@+id/tv_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_hour"
+                        android:textColor="@color/gray_text"
+                        app:fontName="Roboto_Medium" />
+                </com.sweden4all.utils.RippleView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/solid_white_corner_10"
+                android:padding="10dp">
+
+                <com.sweden4all.components.MTextView
+                    android:id="@+id/tv_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/pick_time"
+                    app:fontName="Roboto_Bold" />
+
+                <View
+                    android:id="@+id/separator_why"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_reason"
+                    android:layout_margin="4dp" />
+
+                <com.sweden4all.components.MEditText
+                    android:id="@+id/et_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separator_why"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/solid_gray_eaeaea_corner_10"
+                    android:minLines="5"
+                    android:padding="4dp"
+                    android:textColor="@color/gray_text"
+                    app:fontName="Roboto_Medium" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.sweden4all.utils.RippleView
+        android:id="@+id/rv_send"
+        style="@style/Match_Width_RippleView"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_blue">
+
+        <com.sweden4all.components.MTextView
+            style="@style/RippleView_Text"
+            android:text="@string/send_req"
+            android:textAllCaps="true"
+            app:fontName="Roboto_Bold" />
+    </com.sweden4all.utils.RippleView>
+
+</RelativeLayout>

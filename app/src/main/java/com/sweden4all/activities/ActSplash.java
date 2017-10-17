@@ -21,7 +21,12 @@ public class ActSplash extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        lockAppCheck();
+        resetPrefs();
         launchNextActivity();
+    }
+
+    private void resetPrefs() {
+        prefs.clear();
     }
 
     @Override

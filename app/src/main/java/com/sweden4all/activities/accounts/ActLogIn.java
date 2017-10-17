@@ -1,5 +1,6 @@
 package com.sweden4all.activities.accounts;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -7,7 +8,9 @@ import com.google.gson.Gson;
 import com.sweden4all.R;
 import com.sweden4all.activities.ActHome;
 import com.sweden4all.activities.BaseActivity;
+import com.sweden4all.activities.appointments.ActListAppointments;
 import com.sweden4all.constants.Constants;
+import com.sweden4all.fragments.ZZAppointmentsHistory;
 import com.sweden4all.responses.UserResponse;
 import com.sweden4all.views.BaseView;
 import com.sweden4all.views.accounts.LogInView;
@@ -51,7 +54,9 @@ public class ActLogIn extends BaseActivity {
                 prefs.insert(Constants.USER_DOB, response.getDob());
                 prefs.insert(Constants.ABOUT_ME, response.getAboutMe());
 //                switchActivity(ActHome.class);
-                switchActivity(ActEditProfile.class);
+                switchActivity(ActListAppointments.class);
+//                startActivity(new Intent(context, ZZAppointmentsHistory.class));
+//                switchActivity(ActEditProfile.class);
                 finish();
             }
         } catch (Exception e) {

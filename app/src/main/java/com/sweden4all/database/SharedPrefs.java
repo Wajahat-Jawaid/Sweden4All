@@ -6,6 +6,8 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.util.Base64;
 
+import static com.sweden4all.constants.Constants.INVALID_INT;
+
 public class SharedPrefs {
 
     private final SharedPreferences prefs;
@@ -89,9 +91,9 @@ public class SharedPrefs {
     public int getInt(@NonNull String key) {
         int res;
         try {
-            res = prefs.getInt(key, 0);
+            res = prefs.getInt(key, INVALID_INT);
         } catch (Exception e) {
-            res = 0;
+            res = -1;
         }
         return res;
     }
@@ -107,6 +109,12 @@ public class SharedPrefs {
             res = 0;
         }
         return res;
+    }
+
+    public void clear() {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.clear();
+        editor.apply();
     }
 
     /**

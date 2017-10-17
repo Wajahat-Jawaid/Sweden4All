@@ -2,6 +2,9 @@ package com.sweden4all.app;
 
 import com.sweden4all.activities.BaseActivity;
 import com.sweden4all.database.SharedPrefsModule;
+import com.sweden4all.fragments.BaseDialogFragment;
+import com.sweden4all.fragments.BaseFragment;
+import com.sweden4all.fragments.ZZAppointmentsHistory;
 import com.sweden4all.network.ConnectionModule;
 import com.sweden4all.network.NetworkModule;
 import com.sweden4all.utils.UtilsModule;
@@ -17,4 +20,10 @@ public interface AppComponent {
     void inject(BaseActivity baseActivity);
 
     void inject(BaseView baseView);
+
+    void inject(BaseFragment baseFragment);
+
+    void inject(BaseDialogFragment baseDialogFragment);
+
+    void inject(ZZAppointmentsHistory zzAppointmentsHistory);
 }

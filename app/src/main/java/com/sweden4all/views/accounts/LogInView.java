@@ -47,7 +47,7 @@ public class LogInView extends BaseView implements RippleView.OnRippleCompleteLi
         etPwd = findViewFromId(R.id.et_pwd);
         rvLogin = findViewFromId(R.id.rv_login);
 
-        setToolbar(((ActLogIn) context), R.string.login);
+        setToolbar(R.string.login);
         setListeners();
         registerObservables();
     }

@@ -1,6 +1,5 @@
 package com.sweden4all.views.accounts;
 
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
@@ -14,15 +13,15 @@ import com.sweden4all.R;
 import com.sweden4all.activities.accounts.ActLogIn;
 import com.sweden4all.activities.accounts.ActSignUp;
 import com.sweden4all.constants.Constants;
+import com.sweden4all.events.OnDateSelectedListener;
 import com.sweden4all.utils.RippleView;
 import com.sweden4all.views.BaseView;
-
-import java.util.Calendar;
 
 import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 
-public class SignUpView extends BaseView implements RippleView.OnRippleCompleteListener {
+public class SignUpView extends BaseView implements RippleView.OnRippleCompleteListener,
+        OnDateSelectedListener{
 
     private static final String TAG = "SignUpView";
     private boolean isInfoValid;
@@ -57,13 +56,13 @@ public class SignUpView extends BaseView implements RippleView.OnRippleCompleteL
         etCnfrmPwd = findViewFromId(R.id.et_cnfrm_pwd);
         rvSignUp = findViewFromId(R.id.rv_sign_up);
 
-        setToolbar(((ActSignUp) context), R.string.sign_up);
+        setToolbar(R.string.sign_up);
         setListeners();
         registerObservables();
     }
 
     private void setListeners() {
-        RxView.clicks(etDob).subscribe(__ -> showDatePicker());
+        RxView.clicks(etDob).subscribe(__ -> showDatePicker(this));
         ((RippleView) findViewFromId(R.id.rv_sign_in)).setOnRippleCompleteListener(this);
         ((RippleView) findViewFromId(R.id.rv_sign_up)).setOnRippleCompleteListener(this);
         etCnfrmPwd.setOnKeyListener((v, keyCode, event) -> {
@@ -76,27 +75,6 @@ public class SignUpView extends BaseView implements RippleView.OnRippleCompleteL
             return false;
         });
     }
-
-    private static Calendar getCurrentCalendar() {
-        return Calendar.getInstance();
-    }
-
-    private void showDatePicker() {
-        DatePickerDialog datePickerDialog =
-                new DatePickerDialog(
-                        context,
-                        DATE_LISTENER,
-                        getCurrentCalendar().get(Calendar.YEAR),
-                        getCurrentCalendar().get(Calendar.MONTH),
-                        getCurrentCalendar().get(Calendar.DAY_OF_MONTH));
-        datePickerDialog.show();
-    }
-
-    private final DatePickerDialog.OnDateSetListener DATE_LISTENER =
-            (datePicker, year, month, day) -> {
-                formattedDate = utils.toYMDFormat(year, month, day);
-                etDob.setText(formattedDate);
-            };
 
     private void registerObservables() {
         final Observable<CharSequence> nameOb = RxTextView.textChanges(etName);
@@ -153,5 +131,11 @@ public class SignUpView extends BaseView implements RippleView.OnRippleCompleteL
     }
 
     private void nullifyAssets() {
+    }
+
+    @Override
+    public void onDateSet(String date, String day) {
+        formattedDate = date;
+        etDob.setText(formattedDate);
     }
 }

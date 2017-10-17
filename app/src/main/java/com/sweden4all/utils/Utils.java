@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.widget.EditText;
 
+import java.util.Calendar;
+
 public final class Utils {
 
     private static final String TAG = "Utils";
@@ -57,6 +59,16 @@ public final class Utils {
         }
 
         return false;
+    }
+
+    private static Calendar getCalendar() {
+        return Calendar.getInstance();
+    }
+
+    public String getTodaysFormattedDate() {
+        return toYMDFormat(getCalendar().get(Calendar.YEAR),
+                getCalendar().get(Calendar.MONTH),
+                getCalendar().get(Calendar.DAY_OF_MONTH));
     }
 
     public String toYMDFormat(int y, int m, int d) {

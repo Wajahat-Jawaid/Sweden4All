@@ -56,7 +56,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="10dp"
-                    android:background="@drawable/sea_green_sold_no_stroke_corder_16_btn"
+                    android:background="@drawable/solid_sea_green_corder_16_btn"
                     android:paddingBottom="10dp"
                     android:paddingEnd="30dp"
                     android:paddingStart="30dp"

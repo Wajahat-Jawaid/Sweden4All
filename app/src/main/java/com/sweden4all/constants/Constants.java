@@ -10,13 +10,18 @@ public final class Constants {
      * Keys
      */
     public static final String ABOUT_ME = "aboutMe";
+    public static final String APP_ID = "appID";
 
+    public static final String CAT_ID = "catID";
+    public static final String CAT_NAME = "cat_name";
     public static final String CITY = "city";
     public static final String COUNTRY = "country";
 
+    public static final String DATE_OF_APP = "dateOfApp";
     public static final String DEVICE_TOKEN = "deviceToken";
 
     public static final String EMAIL = "email";
+    public static final String END_TIME = "endTime";
 
     public static final String NAME = "name";
 
@@ -25,8 +30,19 @@ public final class Constants {
 
     public static final String QUERY = "query";
 
+    public static final String SAME_DATE = "sameDate";
+    public static final String START_TIME = "startTime";
+    public static final String STATUS = "status";
+
+    public static final String REASON = "reason";
+
+    public static final String TIME_ID = "timeID";
+    public static final String TIMING = "timing";
+
     public static final String USER_DOB = "userDOB";
     public static final String USER_ID = "userID";
+
+    public static final String WEEKDAY = "weekday";
 
     /**
      * Actions
@@ -53,9 +69,10 @@ public final class Constants {
     public static final int FAILURE_RESULT = 2;
     public static final int SECURITY_PIN_LENGTH = 6;
     public static final int TRANSACTION_PIN_LENGTH = 4;
-    public static final int BTN_ENABLED_BG = R.drawable.solid_blue_no_stroke_corner_20;
-    public static final int BTN_ENABLED_SEA_GREEN_BG = R.drawable.sea_green_sold_no_stroke_corder_16_btn;
-    public static final int BTN_DISABLED_BG = R.drawable.solid_gray_no_stroke_corner_20;
+    public static final int BTN_ENABLED_BG = R.drawable.solid_blue_corner_20;
+    public static final int BTN_ENABLED_SEA_GREEN_BG = R.drawable.solid_sea_green_corder_16_btn;
+    public static final int BTN_DISABLED_BG = R.drawable.solid_gray_corner_20;
+    public static final int INVALID_INT = -1;
 
     /**
      * Messages & Titles
