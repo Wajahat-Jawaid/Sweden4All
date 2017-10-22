@@ -2,8 +2,6 @@ package com.sweden4all.app;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,7 +11,8 @@ import android.widget.TextView;
 
 import com.sweden4all.R;
 import com.sweden4all.activities.BaseActivity;
-import com.sweden4all.constants.Constants;
+import com.sweden4all.activities.accounts.ActEditProfile;
+import com.sweden4all.activities.appointments.ActListAppointments;
 import com.sweden4all.database.SharedPrefs;
 import com.sweden4all.utils.RippleView;
 
@@ -48,6 +47,7 @@ public class DrawerManager {
     private void setDrawer(final Context context, SharedPrefs prefs) {
         // Set Header
         setHeader(prefs);
+        navigationView.setItemIconTintList(null);
         navigationView.bringToFront();
         setDrawer(context);
     }
@@ -57,6 +57,15 @@ public class DrawerManager {
                 menuItem -> {
                     drawerLayout.closeDrawers();
                     switch (menuItem.getItemId()) {
+                        case R.id.home:
+                            drawerLayout.closeDrawer(GravityCompat.START);
+                            return true;
+                        case R.id.profile:
+                            launchAct(ActEditProfile.class, context);
+                            return true;
+                        case R.id.appointments:
+                            launchAct(ActListAppointments.class, context);
+                            return true;
                         default:
                             return true;
                     }
@@ -69,19 +78,26 @@ public class DrawerManager {
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
     }
 
+    private static boolean handleLogout(Context context) {
+//        Intent i = new Intent(context, ActLogin.class);
+//        i.setFlags(FLAG_ACTIVITY_LAUNCH_BY_FLUSHING_STACK);
+//        context.startActivity(i);
+        return true;
+    }
+
     public void setHeader(SharedPrefs prefs) {
         // Initialize views
-        if (headerView == null)
-            headerView = navigationView.getHeaderView(0);
-        if (tvUser == null)
-            tvUser = headerView.findViewById(R.id.tv_user);
-        if (avatar == null)
-            avatar = headerView.findViewById(R.id.iv_profile);
-
-        // Set data to the views
+//        if (headerView == null)
+//            headerView = navigationView.getHeaderView(0);
+//        if (tvUser == null)
+//            tvUser = headerView.findViewById(R.id.tv_user);
+//        if (avatar == null)
+//            avatar = headerView.findViewById(R.id.iv_profile);
+//
+//        // Set data to the views
 //        tvUser.setText(prefs.getString(Constants.FULL_NAME));
 //        try {
-//            final Bitmap bitmap = BitmapFactory.decodeFile(prefs.getString(Constants.PROFILE_IMG));
+//            final Bitmap bitmap = BitmapFactory.decodeFile(prefs.getString(Constants.PROFILE_IMG_LOCAL));
 //            if (bitmap != null)
 //                avatar.setImageBitmap(bitmap);
 //            else avatar.setImageResource(R.mipmap.user_placeholder_rounded);

@@ -28,9 +28,9 @@ public class ActScheduleAppointment extends BaseActivity
 
     public void triggerSend(String reason, String date) {
         final Observable<ScheduleAppointResponse> call = apiInterface.scheduleAppoint(
-                prefs.getInt(Constants.USER_ID),
-                prefs.getInt(Constants.CAT_ID),
-                prefs.getInt(Constants.TIME_ID),
+                prefs.getString(Constants.USER_ID),
+                prefs.getString(Constants.CAT_ID),
+                prefs.getString(Constants.TIME_ID),
                 0,
                 reason,
                 date

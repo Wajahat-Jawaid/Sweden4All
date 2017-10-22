@@ -3,8 +3,8 @@ package com.sweden4all.views;
 import android.content.Context;
 
 import com.sweden4all.R;
-import com.sweden4all.activities.accounts.ActLogIn;
-import com.sweden4all.activities.accounts.ActSignUp;
+import com.sweden4all.activities.appointments.ActListAppointments;
+import com.sweden4all.activities.appointments.ActScheduleAppointment;
 import com.sweden4all.utils.RippleView;
 
 public class HomeView extends BaseView implements RippleView.OnRippleCompleteListener {
@@ -24,21 +24,21 @@ public class HomeView extends BaseView implements RippleView.OnRippleCompleteLis
     }
 
     private void setListeners() {
-        ((RippleView) findViewFromId(R.id.rv_login)).setOnRippleCompleteListener(this);
-        ((RippleView) findViewFromId(R.id.rv_sign_up)).setOnRippleCompleteListener(this);
-        ((RippleView) findViewFromId(R.id.rv_services)).setOnRippleCompleteListener(this);
-        ((RippleView) findViewFromId(R.id.rv_contact)).setOnRippleCompleteListener(this);
-        ((RippleView) findViewFromId(R.id.rv_status)).setOnRippleCompleteListener(this);
+        ((RippleView) findViewFromId(R.id.rv_messenger)).setOnRippleCompleteListener(this);
+        ((RippleView) findViewFromId(R.id.rv_app_status)).setOnRippleCompleteListener(this);
+        ((RippleView) findViewFromId(R.id.rv_appointments)).setOnRippleCompleteListener(this);
+        ((RippleView) findViewFromId(R.id.rv_faq)).setOnRippleCompleteListener(this);
+        ((RippleView) findViewFromId(R.id.rv_make_appoint)).setOnRippleCompleteListener(this);
     }
 
     @Override
     public void onComplete(RippleView v) {
         switch (v.getId()) {
-            case R.id.rv_login:
-                switchActivity(ActLogIn.class);
+            case R.id.rv_appointments:
+                switchActivity(ActListAppointments.class);
                 break;
-            case R.id.rv_sign_up:
-                switchActivity(ActSignUp.class);
+            case R.id.rv_make_appoint:
+                switchActivity(ActScheduleAppointment.class);
                 break;
         }
     }

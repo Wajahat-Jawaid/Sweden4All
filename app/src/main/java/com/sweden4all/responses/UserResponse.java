@@ -19,6 +19,7 @@ public class UserResponse {
     private String dob;
     @SerializedName(Constants.DEVICE_TOKEN)
     private String token;
+    private String isActive;
 
     public String getId() {
         return id;
@@ -58,5 +59,9 @@ public class UserResponse {
 
     public String getToken() {
         return token;
+    }
+
+    public String isActive() {
+        return isActive;
     }
 }

@@ -65,6 +65,7 @@ public abstract class BaseView extends View {
                 new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT));
         init();
+        setDrawer();
     }
 
     private void init() {
@@ -319,7 +320,7 @@ public abstract class BaseView extends View {
             SimpleDateFormat simpledateformat = new SimpleDateFormat("EEEE", Locale.getDefault());
             Date date = new Date(year, month, day - 1);
             String dayOfWeek = simpledateformat.format(date);
-            listener.onDateSet(utils.toYMDFormat(year, month, day), dayOfWeek);
+            listener.onDateSet(utils.toMDYFormat(year, month, day), dayOfWeek);
         }
     }
 }

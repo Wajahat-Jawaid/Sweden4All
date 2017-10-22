@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.sweden4all.R;
 import com.sweden4all.activities.BaseActivity;
 import com.sweden4all.constants.Constants;
 import com.sweden4all.models.User;
@@ -36,11 +37,13 @@ public class ActEditProfile extends BaseActivity {
 
     private void setDataOnView() {
         User user = new User();
+        user.setName(prefs.getString(Constants.NAME));
         user.setAboutMe(prefs.getString(Constants.ABOUT_ME));
         user.setEmail(prefs.getString(Constants.EMAIL));
         user.setPhone(prefs.getString(Constants.PHONE));
         user.setCity(prefs.getString(Constants.CITY));
         user.setCountry(prefs.getString(Constants.COUNTRY));
+        user.setDob(prefs.getString(Constants.USER_DOB));
         ((EditProfileView) view).setData(user);
     }
 
@@ -59,9 +62,13 @@ public class ActEditProfile extends BaseActivity {
         try {
             if (response != null) {
                 Log.i(TAG, "Response: " + new Gson().toJson(response));
-            }
-        } catch (Exception e) {
+                hideLoader();
+                finishWithMessage(R.string.profile_updated);
+            } else finishWithMessage();
+        } catch (Exception ignored) {
+            finishWithMessage();
         }
+        hideLoader();
     }
 
     @Override

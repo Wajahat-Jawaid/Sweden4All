@@ -91,7 +91,7 @@ public class SharedPrefs {
     public int getInt(@NonNull String key) {
         int res;
         try {
-            res = prefs.getInt(key, INVALID_INT);
+            res = prefs.getInt(key, -1);
         } catch (Exception e) {
             res = -1;
         }

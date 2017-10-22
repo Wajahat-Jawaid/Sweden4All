@@ -136,7 +136,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <com.sweden4all.components.MTextView
-                android:id="@+id/et_dob"
+                android:id="@+id/tv_dob"
                 style="@style/Form_Fields_ET"
                 android:text="@string/dob" />
         </LinearLayout>

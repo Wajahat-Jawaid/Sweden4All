@@ -5,7 +5,10 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.widget.EditText;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public final class Utils {
 
@@ -66,12 +69,32 @@ public final class Utils {
     }
 
     public String getTodaysFormattedDate() {
-        return toYMDFormat(getCalendar().get(Calendar.YEAR),
+        return toMDYFormat(
+                getCalendar().get(Calendar.YEAR),
                 getCalendar().get(Calendar.MONTH),
                 getCalendar().get(Calendar.DAY_OF_MONTH));
     }
 
-    public String toYMDFormat(int y, int m, int d) {
+    public String getTodaysYMDDate() {
+        return toYMDFormat(
+                getCalendar().get(Calendar.YEAR),
+                getCalendar().get(Calendar.MONTH),
+                getCalendar().get(Calendar.DAY_OF_MONTH));
+    }
+
+    public String getWeekDay() {
+        SimpleDateFormat simpledateformat = new SimpleDateFormat("EEEE", Locale.getDefault());
+        Date date = new Date(getCalendar().get(Calendar.YEAR),
+                getCalendar().get(Calendar.MONTH),
+                (getCalendar().get(Calendar.DAY_OF_MONTH) - 1));
+        return simpledateformat.format(date);
+    }
+
+    public String toMDYFormat(int y, int m, int d) {
         return (m + 1) + "-" + d + "-" + y;
+    }
+
+    public String toYMDFormat(int y, int m, int d) {
+        return y + "-" + (m + 1) + "-" + d;
     }
 }

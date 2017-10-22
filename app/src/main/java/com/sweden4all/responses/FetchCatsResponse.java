@@ -6,10 +6,10 @@ import com.sweden4all.constants.Constants;
 public class FetchCatsResponse {
 
     @SerializedName(Constants.CAT_ID)
-    private int catId;
+    private String catId;
     private String name;
 
-    public int getCatId() {
+    public String getCatId() {
         return catId;
     }
 

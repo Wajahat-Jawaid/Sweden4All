@@ -23,6 +23,10 @@ public final class Constants {
     public static final String EMAIL = "email";
     public static final String END_TIME = "endTime";
 
+    public static final String HISTORY = "history";
+
+    public static final String IS_ACTIVE = "isActive";
+
     public static final String NAME = "name";
 
     public static final String PASSWORD = "password";
@@ -30,15 +34,17 @@ public final class Constants {
 
     public static final String QUERY = "query";
 
+    public static final String REASON = "reason";
+
     public static final String SAME_DATE = "sameDate";
     public static final String START_TIME = "startTime";
     public static final String STATUS = "status";
 
-    public static final String REASON = "reason";
-
     public static final String TIME_ID = "timeID";
     public static final String TIMING = "timing";
+    public static final String TODAYS = "todays";
 
+    public static final String UPCOMING = "upcoming";
     public static final String USER_DOB = "userDOB";
     public static final String USER_ID = "userID";
 
@@ -72,7 +78,8 @@ public final class Constants {
     public static final int BTN_ENABLED_BG = R.drawable.solid_blue_corner_20;
     public static final int BTN_ENABLED_SEA_GREEN_BG = R.drawable.solid_sea_green_corder_16_btn;
     public static final int BTN_DISABLED_BG = R.drawable.solid_gray_corner_20;
-    public static final int INVALID_INT = -1;
+    public static final String INVALID_INT = "-1";
+    public static final String IS_LOGGED_IN = "is_logged_in";
 
     /**
      * Messages & Titles

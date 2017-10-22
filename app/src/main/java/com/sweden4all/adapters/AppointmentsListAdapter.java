@@ -1,7 +1,6 @@
 package com.sweden4all.adapters;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,9 +29,10 @@ public class AppointmentsListAdapter extends RecyclerView.Adapter<AppointmentsLi
     public void onBindViewHolder(ViewHolder holder, int position) {
         Appointment appointment = list.get(position);
         holder.tvDate.setText(appointment.getDate());
-        holder.tvStartTime.setText(appointment.getTimeId());
-        holder.tvTimings.setText(appointment.getTimeId());
-        holder.tvReason.setText(appointment.getReason());
+        final String timings = appointment.getTimingsStr();
+        holder.tvStartTime.setText(timings.substring(0, timings.indexOf('-')));
+        holder.tvTimings.setText(timings);
+        holder.tvReason.setText(appointment.getCatStr());
     }
 
     @Override

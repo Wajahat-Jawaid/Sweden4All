@@ -2,6 +2,7 @@ package com.sweden4all.views.appointments;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -77,6 +78,7 @@ public class ScheduleAppointmentView extends BaseView implements
 
     private void triggerSend() {
         if (validateInfo()) {
+            Log.i(TAG, "mDate : " + mDate);
             ((ActScheduleAppointment) context).triggerSend(utils.EToS(etReason), mDate);
         }
     }
@@ -88,7 +90,7 @@ public class ScheduleAppointmentView extends BaseView implements
         // 3 - timeID (done)
         // 4 - status (hard coded default 0)
         // 5 - dateOfApp (not required as its already been validated at the timeID)
-        if (prefs.getInt(Constants.CAT_ID) == Constants.INVALID_INT) {
+        if (prefs.getString(Constants.CAT_ID).equals(Constants.INVALID_INT)) {
             showSnackBar(R.string.no_cat_selected);
             return false;
         }

@@ -40,6 +40,10 @@ public interface ApiInterface {
     Observable<UserResponse> editProfile(@Field(Constants.USER_ID) String id,
                                          @Field(Constants.QUERY) String query);
 
+    @FormUrlEncoded
+    @POST(POSTFIX + "getUser")
+    Observable<UserResponse> getUser(@Field(Constants.USER_ID) String id);
+
     /* APPOINTMENTS */
     @GET(POSTFIX + "getCats")
     Observable<List<FetchCatsResponse>> queryCategories();
@@ -51,15 +55,14 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST(POSTFIX + "addApp")
-    Observable<ScheduleAppointResponse> scheduleAppoint(@Field(Constants.USER_ID) int uId,
-                                                        @Field(Constants.CAT_ID) int catId,
-                                                        @Field(Constants.TIME_ID) int timeId,
+    Observable<ScheduleAppointResponse> scheduleAppoint(@Field(Constants.USER_ID) String uId,
+                                                        @Field(Constants.CAT_ID) String catId,
+                                                        @Field(Constants.TIME_ID) String timeId,
                                                         @Field(Constants.STATUS) int status,
                                                         @Field(Constants.REASON) String reason,
                                                         @Field(Constants.DATE_OF_APP) String date);
 
     @FormUrlEncoded
     @POST(POSTFIX + "history")
-    Observable<List<Appointment>> fetchTodayAppointments(@Field(Constants.USER_ID) String uId,
-                                                         @Field(Constants.SAME_DATE) String sameDate);
+    Observable<List<Appointment>> queryAppointments(@Field(Constants.USER_ID) String uId);
 }

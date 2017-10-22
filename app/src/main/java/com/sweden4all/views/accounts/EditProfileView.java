@@ -6,6 +6,7 @@ import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.sweden4all.R;
@@ -68,6 +69,10 @@ public class EditProfileView extends BaseView implements RippleView.OnRippleComp
         etPhone.setText(user.getPhone());
         etCity.setText(user.getCity());
         etCountry.setText(user.getCountry());
+        ((TextView) findViewFromId(R.id.tv_name)).setText(user.getName());
+        ((TextView) findViewFromId(R.id.tv_dob)).setText(user.getDob());
+        ((TextView) findViewFromId(R.id.tv_location))
+                .setText(user.getCity() + " " + user.getCountry());
     }
 
     private void registerObservables() {

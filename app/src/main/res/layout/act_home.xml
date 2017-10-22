@@ -104,7 +104,7 @@
                     android:weightSum="2">
 
                     <com.sweden4all.utils.RippleView
-                        android:id="@+id/rv_login"
+                        android:id="@+id/rv_messenger"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="6dp"
@@ -114,12 +114,12 @@
 
                         <com.sweden4all.components.MTextView
                             style="@style/RippleView_Text"
-                            android:text="@string/login"
+                            android:text="@string/messenger"
                             app:fontName="Roboto_Medium" />
                     </com.sweden4all.utils.RippleView>
 
                     <com.sweden4all.utils.RippleView
-                        android:id="@+id/rv_sign_up"
+                        android:id="@+id/rv_app_status"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="6dp"
@@ -129,7 +129,7 @@
 
                         <com.sweden4all.components.MTextView
                             style="@style/RippleView_Text"
-                            android:text="@string/sign_up"
+                            android:text="@string/app_status"
                             app:fontName="Roboto_Medium" />
                     </com.sweden4all.utils.RippleView>
                 </LinearLayout>
@@ -143,7 +143,7 @@
                     android:weightSum="2">
 
                     <com.sweden4all.utils.RippleView
-                        android:id="@+id/rv_services"
+                        android:id="@+id/rv_appointments"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="6dp"
@@ -153,12 +153,12 @@
 
                         <com.sweden4all.components.MTextView
                             style="@style/RippleView_Text"
-                            android:text="@string/services"
+                            android:text="@string/appointments"
                             app:fontName="Roboto_Medium" />
                     </com.sweden4all.utils.RippleView>
 
                     <com.sweden4all.utils.RippleView
-                        android:id="@+id/rv_contact"
+                        android:id="@+id/rv_faq"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="6dp"
@@ -168,13 +168,13 @@
 
                         <com.sweden4all.components.MTextView
                             style="@style/RippleView_Text"
-                            android:text="@string/contact_us"
+                            android:text="@string/faqs"
                             app:fontName="Roboto_Medium" />
                     </com.sweden4all.utils.RippleView>
                 </LinearLayout>
 
                 <com.sweden4all.utils.RippleView
-                    android:id="@+id/rv_status"
+                    android:id="@+id/rv_make_appoint"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginEnd="6dp"
@@ -185,7 +185,7 @@
 
                     <com.sweden4all.components.MTextView
                         style="@style/RippleView_Text"
-                        android:text="@string/app_status"
+                        android:text="@string/make_appoint"
                         app:fontName="Roboto_Medium" />
                 </com.sweden4all.utils.RippleView>
 

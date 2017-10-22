@@ -214,13 +214,20 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public void showLoader() {
         if (mProgressDialog == null)
-            initProgressDialog();
+            initProgressDialog(true);
         mProgressDialog.show();
     }
 
-    private void initProgressDialog() {
+    public void showNotCancellableLoader() {
+        if (mProgressDialog == null)
+            initProgressDialog(false);
+        mProgressDialog.show();
+    }
+
+    private void initProgressDialog(boolean cancellable) {
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setTitle("Please wait");
+        mProgressDialog.setCancelable(cancellable);
         mProgressDialog.setMessage("Loading...");
     }
 

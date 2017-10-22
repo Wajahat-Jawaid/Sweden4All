@@ -6,11 +6,11 @@ import com.sweden4all.constants.Constants;
 public class FetchTimeSlotsResponse {
 
     @SerializedName(Constants.TIME_ID)
-    private int timeId;
+    private String timeId;
     private String startTime;
     private String endTime;
 
-    public int getTimeId() {
+    public String getTimeId() {
         return timeId;
     }
 

@@ -45,5 +45,7 @@
     <string name="no_cat_selected">No category selected</string>
     <string name="no_time_selected">No time selected</string>
     <string name="appoint_done_msg">Appointment request has been received, soon you\'ll receive confirmation</string>
+    <string name="acc_inactive_contact">Account temporarily suspended. Please contact support</string>
+    <string name="profile_updated">Profile updated successfully</string>
     <string name="a"></string>
 </resources>

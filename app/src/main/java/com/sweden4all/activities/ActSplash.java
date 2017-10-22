@@ -6,12 +6,16 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.sweden4all.activities.accounts.ActLogIn;
+import com.sweden4all.constants.Constants;
 import com.sweden4all.exclude.JSONParser;
 import com.sweden4all.exclude.URLManager;
 import com.sweden4all.views.BaseView;
 import com.sweden4all.views.SplashView;
 
 import org.json.JSONObject;
+
+import static com.sweden4all.constants.Constants.IS_LOGGED_IN;
+import static com.sweden4all.constants.Constants.USER_ID;
 
 public class ActSplash extends BaseActivity {
 
@@ -21,12 +25,16 @@ public class ActSplash extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        lockAppCheck();
-        resetPrefs();
+//        resetPrefs();
         launchNextActivity();
     }
 
     private void resetPrefs() {
+        String id = prefs.getString(USER_ID);
+        boolean isLoggedIn = prefs.getBool(Constants.IS_LOGGED_IN);
         prefs.clear();
+        prefs.insert(USER_ID, id);
+        prefs.insert(IS_LOGGED_IN, isLoggedIn);
     }
 
     @Override

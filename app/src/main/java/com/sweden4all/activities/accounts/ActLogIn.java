@@ -10,7 +10,6 @@ import com.sweden4all.activities.ActHome;
 import com.sweden4all.activities.BaseActivity;
 import com.sweden4all.activities.appointments.ActListAppointments;
 import com.sweden4all.constants.Constants;
-import com.sweden4all.fragments.ZZAppointmentsHistory;
 import com.sweden4all.responses.UserResponse;
 import com.sweden4all.views.BaseView;
 import com.sweden4all.views.accounts.LogInView;
@@ -53,9 +52,8 @@ public class ActLogIn extends BaseActivity {
                 prefs.insert(Constants.COUNTRY, response.getCountry());
                 prefs.insert(Constants.USER_DOB, response.getDob());
                 prefs.insert(Constants.ABOUT_ME, response.getAboutMe());
-//                switchActivity(ActHome.class);
-                switchActivity(ActListAppointments.class);
-//                startActivity(new Intent(context, ZZAppointmentsHistory.class));
+                switchActivity(ActHome.class);
+//                switchActivity(ActListAppointments.class);
 //                switchActivity(ActEditProfile.class);
                 finish();
             }

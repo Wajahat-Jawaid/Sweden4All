@@ -3,57 +3,57 @@
 
     <item
         android:id="@+id/home"
-        android:icon="@mipmap/ic_profile"
+        android:icon="@drawable/ic_home_blue_9ab8e6_24dp"
         android:title="@string/home" />
 
     <item
         android:id="@+id/profile"
-        android:icon="@mipmap/ic_profile"
+        android:icon="@drawable/ic_profile_blue_9ab8e6_24dp"
         android:title="@string/profile" />
 
     <item
         android:id="@+id/appointments"
-        android:icon="@mipmap/ic_settings"
+        android:icon="@drawable/ic_appointments_blue_9ab8e6_24dp"
         android:title="@string/appointments" />
 
     <item
         android:id="@+id/messenger"
-        android:icon="@mipmap/ic_profile"
+        android:icon="@drawable/ic_messenger_blue_9ab8e6_24dp"
         android:title="@string/messenger" />
 
     <item
         android:id="@+id/app_status"
-        android:icon="@mipmap/ic_settings"
+        android:icon="@drawable/ic_appointment_status_blue_9ab8e6_24dp"
         android:title="@string/app_status" />
 
     <item
         android:id="@+id/settings"
-        android:icon="@mipmap/ic_profile"
+        android:icon="@drawable/ic_settings_blue_9ab8e6_24dp"
         android:title="@string/settings" />
 
     <item
         android:id="@+id/services"
-        android:icon="@mipmap/ic_settings"
+        android:icon="@drawable/ic_services_blue_9ab8e6_24dp"
         android:title="@string/services" />
 
     <item
         android:id="@+id/about_us"
-        android:icon="@mipmap/ic_profile"
+        android:icon="@drawable/ic_about_us_blue_9ab8e6_24dp"
         android:title="@string/about_us" />
 
     <item
         android:id="@+id/contact_us"
-        android:icon="@mipmap/ic_settings"
+        android:icon="@drawable/ic_contact_blue_9ab8e6_24dp"
         android:title="@string/contact_us" />
 
     <item
         android:id="@+id/faqs"
-        android:icon="@mipmap/ic_profile"
+        android:icon="@drawable/ic_faqs_blue_9ab8e6_24dp"
         android:title="@string/faqs" />
 
     <item
         android:id="@+id/logout"
-        android:icon="@mipmap/ic_settings"
+        android:icon="@drawable/ic_logout_blue_9ab8e6_24dp"
         android:title="@string/logout" />
 
 </menu>

@@ -39,14 +39,14 @@ public class DlgFgQueryTimings extends BaseDialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setTitle(view);
-        queryCategories();
+        queryTimings();
     }
 
     private void setTitle(View view) {
         ((TextView) view.findViewById(R.id.tv_title)).setText(getResString(R.string.select_timings));
     }
 
-    private void queryCategories() {
+    private void queryTimings() {
         final Observable<List<FetchTimeSlotsResponse>> call = apiInterface.queryTimeSlots(
                 prefs.getString(Constants.DATE_OF_APP), prefs.getString(Constants.WEEKDAY));
         call.observeOn(AndroidSchedulers.mainThread())
@@ -69,6 +69,7 @@ public class DlgFgQueryTimings extends BaseDialogFragment {
                         FetchTimeSlotsResponse resp = response.get(position);
                         Log.i(TAG, "selected time: " + resp.getStartTime() + " - " +
                                 resp.getEndTime());
+                        prefs.insert(Constants.TIME_ID, resp.getTimeId());
                         prefs.insert(Constants.TIMING, resp.getStartTime() + " - " +
                                 resp.getEndTime());
                         hideLoader();
