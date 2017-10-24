@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/inc_toolbar_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+            <com.sweden4all.components.MEditText
+                android:id="@+id/et_app_id"
+                style="@style/Form_Fields_ET"
+                android:hint="@string/app_id"
+                app:fontName="Roboto_Medium" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/form_fields_margin_bottom">
+
+            <com.sweden4all.components.MEditText
+                android:id="@+id/et_email"
+                style="@style/Form_Fields_ET"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                app:fontName="Roboto_Medium" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.sweden4all.utils.RippleView
+            android:id="@+id/rv_check_status"
+            style="@style/Wrap_Width_RippleView"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/solid_blue_corner_20">
+
+            <com.sweden4all.components.MTextView
+                style="@style/RippleView_Text"
+                android:text="@string/chk_status"
+                app:fontName="Roboto_Bold" />
+        </com.sweden4all.utils.RippleView>
+    </LinearLayout>
+
+    <com.sweden4all.components.MTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_text"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="@string/results"
+        android:textColor="@color/black_text"
+        app:fontName="Roboto_Medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="30dp">
+
+        <com.sweden4all.components.MTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textColor="@color/black_text"
+            app:fontName="Roboto_Regular" />
+
+    </LinearLayout>
+</LinearLayout>

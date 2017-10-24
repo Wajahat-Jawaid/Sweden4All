@@ -117,10 +117,10 @@ public class ActListAppointments extends BaseActivity {
     }
 
     private void queryTimings() {
-        Log.i(TAG, "Date: " + utils.getTodaysFormattedDate());
+        Log.i(TAG, "Date: " + utils.getTodaysMDYDate());
         Log.i(TAG, "Weekday: " + utils.getWeekDay());
         final Observable<List<FetchTimeSlotsResponse>> call = apiInterface.queryTimeSlots(
-                utils.getTodaysFormattedDate(), utils.getWeekDay());
+                utils.getTodaysMDYDate(), utils.getWeekDay());
         call.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::parseTimingsResponse);

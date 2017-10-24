@@ -221,8 +221,8 @@ public abstract class BaseView extends View {
         return builder;
     }
 
-    public void showDialogWithDismissCallback(String title, String message,
-                                              int positiveText,
+    public void showDialogWithDismissCallback(@StringRes int title, @StringRes int message,
+                                              @StringRes int positiveText,
                                               MaterialDialog.SingleButtonCallback positiveCall) {
         new MaterialDialog.Builder(context).title(title)
                 .content(message)

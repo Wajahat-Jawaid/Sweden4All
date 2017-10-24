@@ -65,4 +65,12 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST(POSTFIX + "history")
     Observable<List<Appointment>> queryAppointments(@Field(Constants.USER_ID) String uId);
+
+    @FormUrlEncoded
+    @POST(POSTFIX + "getApp")
+    Observable<Appointment> queryAppointmentDetails(@Field(Constants.APP_ID) String id);
+
+    @FormUrlEncoded
+    @POST(POSTFIX + "deleteApp")
+    Observable<Appointment> deleteAppointment(@Field(Constants.APP_ID) String id);
 }

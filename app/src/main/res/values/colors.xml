@@ -7,9 +7,11 @@
     <color name="black_text">@android:color/black</color>
     <color name="blue_3d71c7">#3d71c7</color>
     <color name="blue_9ab8e6">#9ab8e6</color>
+    <color name="brown_b18742">#b18742</color>
     <color name="gray_text">#555555</color>
     <color name="gray_hint">#888888</color>
     <color name="gray_eaeaea">#eaeaea</color>
+    <color name="green_39b04f">#39b04f</color>
     <color name="purple_564383">#564383</color>
     <color name="ripple">#bcb5b5</color>
     <color name="sea_green">#38b8a0</color>

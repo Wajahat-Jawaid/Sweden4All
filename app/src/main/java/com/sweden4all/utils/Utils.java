@@ -68,7 +68,7 @@ public final class Utils {
         return Calendar.getInstance();
     }
 
-    public String getTodaysFormattedDate() {
+    public String getTodaysMDYDate() {
         return toMDYFormat(
                 getCalendar().get(Calendar.YEAR),
                 getCalendar().get(Calendar.MONTH),

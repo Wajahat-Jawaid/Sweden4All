@@ -11,6 +11,7 @@ public final class Constants {
      */
     public static final String ABOUT_ME = "aboutMe";
     public static final String APP_ID = "appID";
+    public static final String APPOINTMENT = "appointment";
 
     public static final String CAT_ID = "catID";
     public static final String CAT_NAME = "cat_name";

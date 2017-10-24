@@ -42,17 +42,16 @@
         <!-- APPOINTMENTS STARTS -->
         <activity
             android:name=".activities.appointments.ActListAppointments"
-            android:theme="@style/MyMaterialTheme"
             android:launchMode="singleInstance"
+            android:theme="@style/MyMaterialTheme"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".activities.appointments.ActScheduleAppointment"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".fragments.ZZAppointmentsHistory"
-            android:launchMode="singleInstance"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:name=".activities.appointments.ActAppointmentDetails"
+            android:noHistory="true" />
         <!-- APPOINTMENTS ENDS -->
     </application>
 

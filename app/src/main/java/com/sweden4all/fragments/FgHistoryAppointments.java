@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sweden4all.R;
+import com.sweden4all.activities.appointments.ActAppointmentDetails;
 import com.sweden4all.adapters.AppointmentsListAdapter;
 import com.sweden4all.constants.Constants;
+import com.sweden4all.events.RecyclerItemClickListener;
 import com.sweden4all.models.Appointment;
 
 import java.util.ArrayList;
@@ -54,6 +56,12 @@ public class FgHistoryAppointments extends BaseFragment {
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                 recyclerView.setAdapter(new AppointmentsListAdapter(list));
                 recyclerView.setHasFixedSize(true);
+                recyclerView.addOnItemTouchListener(
+                        new RecyclerItemClickListener(context, (view, position) -> {
+                            Bundle bundle = new Bundle();
+                            bundle.putParcelable(Constants.APPOINTMENT, list.get(position));
+                            switchActivity(ActAppointmentDetails.class, bundle);
+                        }));
             }
         }
     }
