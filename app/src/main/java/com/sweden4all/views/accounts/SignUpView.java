@@ -10,7 +10,7 @@ import android.widget.EditText;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.sweden4all.R;
-import com.sweden4all.activities.accounts.ActLogIn;
+import com.sweden4all.activities.accounts.ActLogin;
 import com.sweden4all.activities.accounts.ActSignUp;
 import com.sweden4all.constants.Constants;
 import com.sweden4all.events.OnDateSelectedListener;
@@ -21,7 +21,7 @@ import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 
 public class SignUpView extends BaseView implements RippleView.OnRippleCompleteListener,
-        OnDateSelectedListener{
+        OnDateSelectedListener {
 
     private static final String TAG = "SignUpView";
     private boolean isInfoValid;
@@ -116,7 +116,7 @@ public class SignUpView extends BaseView implements RippleView.OnRippleCompleteL
                 triggerSignUp();
                 break;
             case R.id.rv_sign_in:
-                ((ActSignUp) context).switchActivity(ActLogIn.class);
+                ((ActSignUp) context).switchActivity(ActLogin.class);
                 break;
         }
     }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.sweden4all.components.MTextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_toStartOf="@+id/ib_expand_collapse"
+        android:paddingBottom="3dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="6dp"
+        android:paddingTop="3dp"
+        android:text="@string/about_me"
+        android:textColor="@color/gray_text"
+        android:textSize="15sp"
+        app:fontName="Roboto_Medium" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/ib_expand_collapse"
+        style="@style/Style_IB"
+        android:layout_alignParentEnd="true"
+        android:padding="2dp"
+        app:srcCompat="@drawable/ic_expand_gray_555555_black_34dp" />
+
+    <com.sweden4all.components.MTextView
+        android:id="@+id/tv_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_question"
+        android:paddingBottom="3dp"
+        android:paddingEnd="6dp"
+        android:paddingStart="6dp"
+        android:paddingTop="3dp"
+        android:text="@string/about_me"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:fontName="Roboto_Regular" />
+
+    <View
+        style="@style/Separator_Gray_eaeaea_1dp"
+        android:layout_below="@+id/tv_answer"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp" />
+</RelativeLayout>

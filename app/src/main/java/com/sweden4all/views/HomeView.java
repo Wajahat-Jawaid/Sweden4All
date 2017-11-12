@@ -3,6 +3,7 @@ package com.sweden4all.views;
 import android.content.Context;
 
 import com.sweden4all.R;
+import com.sweden4all.activities.ActMessenger;
 import com.sweden4all.activities.appointments.ActListAppointments;
 import com.sweden4all.activities.appointments.ActScheduleAppointment;
 import com.sweden4all.utils.RippleView;
@@ -34,6 +35,9 @@ public class HomeView extends BaseView implements RippleView.OnRippleCompleteLis
     @Override
     public void onComplete(RippleView v) {
         switch (v.getId()) {
+            case R.id.rv_messenger:
+                switchActivity(ActMessenger.class);
+                break;
             case R.id.rv_appointments:
                 switchActivity(ActListAppointments.class);
                 break;

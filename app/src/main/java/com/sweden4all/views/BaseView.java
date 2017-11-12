@@ -269,7 +269,7 @@ public abstract class BaseView extends View {
         context.startActivity(intent);
     }
 
-    protected void switchActivity(Class<? extends BaseActivity> activity, int flags) {
+    public void switchActivity(Class<? extends BaseActivity> activity, int flags) {
         Intent intent = new Intent(context, activity);
         intent.setFlags(flags);
         context.startActivity(intent);

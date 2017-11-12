@@ -1,11 +1,11 @@
 package com.sweden4all.activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.sweden4all.activities.accounts.ActLogIn;
 import com.sweden4all.constants.Constants;
 import com.sweden4all.exclude.JSONParser;
 import com.sweden4all.exclude.URLManager;
@@ -43,8 +43,9 @@ public class ActSplash extends BaseActivity {
     }
 
     public void launchNextActivity() {
-//        switchActivity(ActHome.class);
-        switchActivity(ActLogIn.class);
+        switchActivity(ActHome.class);
+//        switchActivity(ActLogin.class);
+//        switchActivity(ActFAQs.class);
 //        switchActivity(ActUpdatePin.class);
 //        switchActivity(ActManageCards.class);
 //        switchActivity(ActTermsNConds.class);

@@ -2,6 +2,7 @@ package com.sweden4all.app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -9,12 +10,24 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.sweden4all.R;
+import com.sweden4all.activities.ActApplicationStatus;
+import com.sweden4all.activities.ActFAQs;
+import com.sweden4all.activities.ActMessenger;
+import com.sweden4all.activities.ActWebView;
 import com.sweden4all.activities.BaseActivity;
 import com.sweden4all.activities.accounts.ActEditProfile;
+import com.sweden4all.activities.accounts.ActLogin;
 import com.sweden4all.activities.appointments.ActListAppointments;
+import com.sweden4all.activities.settings.ActSettings;
+import com.sweden4all.constants.Constants;
 import com.sweden4all.database.SharedPrefs;
 import com.sweden4all.utils.RippleView;
+
+import static android.R.id.message;
+import static com.sweden4all.constants.Constants.FLAG_ACTIVITY_LAUNCH_BY_FLUSHING_STACK;
 
 public class DrawerManager {
 
@@ -66,6 +79,30 @@ public class DrawerManager {
                         case R.id.appointments:
                             launchAct(ActListAppointments.class, context);
                             return true;
+                        case R.id.messenger:
+                            launchAct(ActMessenger.class, context);
+                            return true;
+                        case R.id.app_status:
+                            launchAct(ActApplicationStatus.class, context);
+                            return true;
+                        case R.id.settings:
+                            launchAct(ActSettings.class, context);
+                            return true;
+                        case R.id.services:
+                            launchWebViewAct("http://www.sweden4all.dk/", context);
+                            return true;
+                        case R.id.about_us:
+                            launchWebViewAct("http://www.sweden4all.dk/about-us/", context);
+                            return true;
+                        case R.id.contact_us:
+                            launchWebViewAct("http://www.sweden4all.dk/contact-us/", context);
+                            return true;
+                        case R.id.faqs:
+                            launchAct(ActFAQs.class, context);
+                            return true;
+                        case R.id.logout:
+                            showLogoutDlg(context);
+                            return true;
                         default:
                             return true;
                     }
@@ -78,11 +115,29 @@ public class DrawerManager {
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
     }
 
+    private void launchWebViewAct(String url, Context context) {
+        context.startActivity(new Intent(context, ActWebView.class)
+                .putExtra(Constants.WEBVIEW_URL, url)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+    }
+
     private static boolean handleLogout(Context context) {
-//        Intent i = new Intent(context, ActLogin.class);
-//        i.setFlags(FLAG_ACTIVITY_LAUNCH_BY_FLUSHING_STACK);
-//        context.startActivity(i);
+        Intent i = new Intent(context, ActLogin.class);
+        i.setFlags(FLAG_ACTIVITY_LAUNCH_BY_FLUSHING_STACK);
+        context.startActivity(i);
         return true;
+    }
+
+    private static void showLogoutDlg(Context context) {
+        new MaterialDialog.Builder(context)
+                .title(R.string.plz_cnfrm)
+                .content(R.string.u_sure_want_to_logout)
+                .positiveText(android.R.string.yes)
+                .onPositive((dialog, which) -> handleLogout(context))
+                .negativeText(android.R.string.cancel)
+                .onNegative((dialog, which) -> dialog.dismiss())
+                .show();
     }
 
     public void setHeader(SharedPrefs prefs) {

@@ -19,9 +19,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class ActLogIn extends BaseActivity {
+public class ActLogin extends BaseActivity {
 
-    private static final String TAG = "ActLogIn";
+    private static final String TAG = "ActLogin";
 
     private Disposable mDisposable;
 

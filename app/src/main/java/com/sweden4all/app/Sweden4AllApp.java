@@ -2,6 +2,8 @@ package com.sweden4all.app;
 
 import android.app.Application;
 
+import com.google.firebase.FirebaseApp;
+
 public class Sweden4AllApp extends Application {
 
     private static Sweden4AllApp mInstance;

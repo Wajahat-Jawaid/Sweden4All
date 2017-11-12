@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Sweden4All.iml" filepath="$PROJECT_DIR$/Sweden4All.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quickblox-android-sdk-chat-3.4/quickblox-android-sdk-chat-3.4.iml" filepath="$PROJECT_DIR$/quickblox-android-sdk-chat-3.4/quickblox-android-sdk-chat-3.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quickblox-android-sdk-core-3.4/quickblox-android-sdk-core-3.4.iml" filepath="$PROJECT_DIR$/quickblox-android-sdk-core-3.4/quickblox-android-sdk-core-3.4.iml" />
     </modules>
   </component>
 </project>

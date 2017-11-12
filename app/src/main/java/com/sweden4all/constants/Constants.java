@@ -10,11 +10,13 @@ public final class Constants {
      * Keys
      */
     public static final String ABOUT_ME = "aboutMe";
+    public static final String ANSWER = "Answer";
     public static final String APP_ID = "appID";
     public static final String APPOINTMENT = "appointment";
 
     public static final String CAT_ID = "catID";
     public static final String CAT_NAME = "cat_name";
+    public static final String CHAT_ID = "chatID";
     public static final String CITY = "city";
     public static final String COUNTRY = "country";
 
@@ -27,19 +29,29 @@ public final class Constants {
     public static final String HISTORY = "history";
 
     public static final String IS_ACTIVE = "isActive";
+    public static final String IS_PHOTO = "isPhoto";
+    public static final String IS_USER_MSG = "isUserMsg";
+
+    public static final String LAST_MSG_ID = "lastMsgID";
+
+    public static final String MESSAGE = "message";
+    public static final String MSG_ID = "msgID";
 
     public static final String NAME = "name";
 
     public static final String PASSWORD = "password";
     public static final String PHONE = "phone";
+    public static final String PHOTO = "photo";
 
     public static final String QUERY = "query";
+    public static final String QUESTION = "Question";
 
     public static final String REASON = "reason";
 
     public static final String SAME_DATE = "sameDate";
     public static final String START_TIME = "startTime";
     public static final String STATUS = "status";
+    public static final String SUCCESS_RESPONSE = "success";
 
     public static final String TIME_ID = "timeID";
     public static final String TIMING = "timing";
@@ -49,6 +61,7 @@ public final class Constants {
     public static final String USER_DOB = "userDOB";
     public static final String USER_ID = "userID";
 
+    public static final String WEBVIEW_URL = "webview_url";
     public static final String WEEKDAY = "weekday";
 
     /**

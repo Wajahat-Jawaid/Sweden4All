@@ -154,7 +154,7 @@
 
             <com.sweden4all.components.MTextView
                 style="@style/RippleView_Text"
-                android:text="@android:string/delete"
+                android:text="@string/delete"
                 app:fontName="Roboto_Bold" />
         </com.sweden4all.utils.RippleView>
     </LinearLayout>

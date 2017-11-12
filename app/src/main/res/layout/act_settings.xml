@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/inc_toolbar_back" />
+
+    <com.sweden4all.components.MTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_f1eff7"
+        android:paddingBottom="14dp"
+        android:paddingStart="20dp"
+        android:paddingTop="14dp"
+        android:text="@string/account"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"
+        app:fontName="Roboto_Medium" />
+
+    <com.sweden4all.utils.RippleView
+        android:id="@+id/rv_profile_settings"
+        style="@style/Settings_RV">
+
+        <com.sweden4all.components.MTextView
+            style="@style/Settings_TV"
+            android:text="@string/profile_settings"
+            app:fontName="Roboto_Regular" />
+    </com.sweden4all.utils.RippleView>
+
+    <View style="@style/Separator_Gray_eaeaea_1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingEnd="14dp"
+        android:paddingStart="20dp"
+        android:paddingTop="14dp">
+
+        <com.sweden4all.utils.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.sweden4all.components.MTextView
+                style="@style/Settings_TV"
+                android:text="@string/push_noti"
+                app:fontName="Roboto_Regular" />
+        </com.sweden4all.utils.RippleView>
+
+        <Switch
+            android:id="@+id/switch_push_noti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <View style="@style/Separator_Gray_eaeaea_1dp" />
+
+    <com.sweden4all.utils.RippleView
+        android:id="@+id/rv_chng_pwd"
+        style="@style/Settings_RV">
+
+        <com.sweden4all.components.MTextView
+            style="@style/Settings_TV"
+            android:text="@string/chng_pwd"
+            app:fontName="Roboto_Regular" />
+    </com.sweden4all.utils.RippleView>
+
+    <View style="@style/Separator_Gray_eaeaea_1dp" />
+
+    <com.sweden4all.utils.RippleView
+        android:id="@+id/rv_logout"
+        style="@style/Settings_RV">
+
+        <com.sweden4all.components.MTextView
+            style="@style/Settings_TV"
+            android:text="@string/logout"
+            app:fontName="Roboto_Regular" />
+    </com.sweden4all.utils.RippleView>
+
+    <View style="@style/Separator_Gray_eaeaea_1dp" />
+
+    <com.sweden4all.components.MTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_f1eff7"
+        android:paddingBottom="14dp"
+        android:paddingStart="20dp"
+        android:paddingTop="14dp"
+        android:text="@string/are_faqs_not_able"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"
+        app:fontName="Roboto_Medium" />
+
+    <com.sweden4all.utils.RippleView
+        android:id="@+id/rv_ask_ques"
+        style="@style/Settings_RV">
+
+        <com.sweden4all.components.MTextView
+            style="@style/Settings_TV"
+            android:text="@string/ask_ques"
+            app:fontName="Roboto_Regular" />
+    </com.sweden4all.utils.RippleView>
+
+    <View style="@style/Separator_Gray_eaeaea_1dp" />
+</LinearLayout>

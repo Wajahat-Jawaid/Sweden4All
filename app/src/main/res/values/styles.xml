@@ -86,4 +86,37 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
     </style>
 
+    <style name="Settings_RV">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <style name="Settings_TV">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:drawableStart">@mipmap/ic_profile</item>
+    </style>
+
+    <style name="Separator_Gray_eaeaea_1dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_eaeaea</item>
+    </style>
+
+    <style name="Field_Bg_Stroke_Gray_cccccc_Corner_8">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/solid_trans_stroke_gray_cccccc_corner_6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/solid_trans_stroke_gray_cccccc_corner_6</item>
+    </style>
+
 </resources>

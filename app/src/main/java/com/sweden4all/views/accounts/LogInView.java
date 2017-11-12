@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.sweden4all.R;
-import com.sweden4all.activities.accounts.ActLogIn;
+import com.sweden4all.activities.accounts.ActLogin;
 import com.sweden4all.activities.accounts.ActSignUp;
 import com.sweden4all.constants.Constants;
 import com.sweden4all.utils.RippleView;
@@ -86,7 +86,7 @@ public class LogInView extends BaseView implements RippleView.OnRippleCompleteLi
 
     private void triggerSignIn() {
         // Trigger now
-        ((ActLogIn) context).triggerSignIn(utils.EToS(etEmail), utils.EToS(etPwd));
+        ((ActLogin) context).triggerSignIn(utils.EToS(etEmail), utils.EToS(etPwd));
     }
 
     @Override
@@ -96,7 +96,7 @@ public class LogInView extends BaseView implements RippleView.OnRippleCompleteLi
                 triggerSignIn();
                 break;
             case R.id.rv_sign_up:
-                ((ActLogIn) context).switchActivity(ActSignUp.class);
+                ((ActLogin) context).switchActivity(ActSignUp.class);
                 break;
         }
     }

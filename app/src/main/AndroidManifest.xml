@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sweden4all">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,7 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl">
         <activity
             android:name=".activities.ActSplash"
             android:noHistory="true">
@@ -23,10 +25,21 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.ActHome" />
+        <activity android:name=".activities.settings.ActSettings" />
+        <activity android:name=".activities.ActApplicationStatus" />
+        <activity
+            android:name=".activities.ActWebView"
+            android:noHistory="true" />
+        <activity
+            android:name=".activities.ActFAQs"
+            android:noHistory="true" />
+        <activity
+            android:name=".activities.ActMessenger"
+            android:noHistory="true" />
 
         <!-- ACCOUNTS STARTS -->
         <activity
-            android:name=".activities.accounts.ActLogIn"
+            android:name=".activities.accounts.ActLogin"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
@@ -35,6 +48,10 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".activities.accounts.ActEditProfile"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.accounts.ActChangePassword"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <!-- ACCOUNTS ENDS -->

@@ -2,9 +2,13 @@ package com.sweden4all.network;
 
 import com.sweden4all.constants.Constants;
 import com.sweden4all.models.Appointment;
+import com.sweden4all.models.Chat;
+import com.sweden4all.models.Message;
 import com.sweden4all.responses.FetchCatsResponse;
 import com.sweden4all.responses.FetchTimeSlotsResponse;
 import com.sweden4all.responses.ScheduleAppointResponse;
+import com.sweden4all.responses.SendMessageResponse;
+import com.sweden4all.responses.StartChatResponse;
 import com.sweden4all.responses.UserResponse;
 
 import java.util.List;
@@ -73,4 +77,35 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST(POSTFIX + "deleteApp")
     Observable<Appointment> deleteAppointment(@Field(Constants.APP_ID) String id);
+
+    /* CHATS */
+    @FormUrlEncoded
+    @POST(POSTFIX + "getChats")
+    Observable<List<Chat>> getAllChats(@Field(Constants.USER_ID) String id);
+
+    @FormUrlEncoded
+    @POST(POSTFIX + "startChat")
+    Observable<StartChatResponse> triggerStartChat(@Field(Constants.USER_ID) String userId,
+                                                   @Field(Constants.MESSAGE) String message,
+                                                   @Field(Constants.DEVICE_TOKEN) String token,
+                                                   @Field(Constants.IS_USER_MSG) String isUserMsg,
+                                                   @Field(Constants.IS_PHOTO) int isPhoto,
+                                                   @Field(Constants.PHOTO) String photo,
+                                                   @Field(Constants.NAME) String name);
+
+    @FormUrlEncoded
+    @POST(POSTFIX + "sendMessage")
+    Observable<SendMessageResponse> sendMessage(@Field(Constants.CHAT_ID) int chatId,
+                                                @Field(Constants.USER_ID) String userId,
+                                                @Field(Constants.MESSAGE) String message,
+                                                @Field(Constants.DEVICE_TOKEN) String token,
+                                                @Field(Constants.IS_USER_MSG) String isUserMsg,
+                                                @Field(Constants.IS_PHOTO) int isPhoto,
+                                                @Field(Constants.PHOTO) String photo);
+
+    @FormUrlEncoded
+    @POST(POSTFIX + "getMessages")
+    Observable<List<Message>> getMessages(@Field(Constants.CHAT_ID) int chatId,
+                                          @Field(Constants.LAST_MSG_ID) int lastMsgId);
+
 }
